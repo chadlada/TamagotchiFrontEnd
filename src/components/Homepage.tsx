@@ -45,7 +45,7 @@ export function Homepage() {
         <form
           onSubmit={function (event) {
             event.preventDefault()
-            _createNewPet
+            _createNewPet()
           }}
         >
           <input
