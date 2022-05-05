@@ -79,6 +79,21 @@ export function PetDetails() {
     }
   }
 
+  async function playWithPet() {
+    const response = await axios.post(
+      `https://chadladatamagotchi.herokuapp.com/api/Pets/${params.id}/Playtimes`,
+      {
+        headers: {
+          'Content-Type': 'application/json-patch+json',
+        },
+      }
+    )
+
+    if (response.status === 200) {
+      setPetPlay(response.data.happinessLevel)
+      updatePetLevels()
+    }
+  }
   async function deletePet() {
     const response = await axios.delete(
       `https://chadladatamagotchi.herokuapp.com/api/Pets/${params.id}`
@@ -93,8 +108,7 @@ export function PetDetails() {
     <>
       <p className="detailsp">Interact with your pet!</p>
       <div className="interact">
-        <button>Play</button>
-        <button>Pet</button>
+        <button onClick={playWithPet}>Play</button>
         <button onClick={feedPet}>Feed </button>
         <button onClick={scoldPet}>Scold</button>
         <br></br>
