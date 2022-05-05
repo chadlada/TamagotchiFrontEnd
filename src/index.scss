@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&family=Koulen&display=swap');
 :root {
   font: 16px / 1 sans-serif;
 
@@ -64,6 +63,28 @@ li {
   display: flex;
   justify-content: center;
   height: 200px;
+}
+
+.interact {
+  display: flex;
+  justify-content: center;
+}
+
+.detailsp {
+  text-align: center;
+  font-family: 'Koulen', cursive;
+}
+
+h2 {
+  font-family: 'Indie Flower', cursive;
+  text-align: center;
+  text-decoration: underline;
+}
+.pet-details {
+  text-align: center;
+  font-family: 'Indie Flower', cursive;
+  color: #e3e391;
+  font-size: 23px;
 }
 
 @media all and (max-width: 494px) {
