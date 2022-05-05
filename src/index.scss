@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
+
 :root {
   font: 16px / 1 sans-serif;
 
@@ -17,6 +19,58 @@ html {
 }
 
 body {
-  margin: 0;
+  // margin: 2rem;
   min-height: 100%;
+  background-color: #5a9090;
+}
+
+input {
+  margin-left: 6px;
+  margin-top: 11px;
+}
+
+ul {
+  list-style: none;
+}
+
+.create-pet {
+  display: flex;
+  justify-content: center;
+}
+
+h1 {
+  text-align: center;
+  font-family: 'Indie Flower', cursive;
+  font-size: 3rem;
+}
+
+a {
+  text-decoration: none;
+  color: #92dfdb;
+}
+
+ul li a {
+  color: yellow;
+  font-family: 'Indie Flower', cursive;
+  color: #e3e391;
+}
+
+li {
+  border-bottom: 1px solid;
+  margin-bottom: 10px;
+}
+
+.tam-image {
+  display: flex;
+  justify-content: center;
+  height: 200px;
+}
+
+@media all and (max-width: 494px) {
+  h1 {
+    font-size: 2rem;
+  }
+  .tam-image {
+    height: 100px;
+  }
 }
