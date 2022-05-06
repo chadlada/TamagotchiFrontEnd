@@ -59,21 +59,25 @@ export function Homepage() {
         </form>
       </div>
       <ul>
-        {petList.map(function (pet) {
-          return (
-            <li key={pet.id}>
-              <Link to={`./petdetails/${pet.id}`}>
-                Click for details on {[pet.name]}
-              </Link>
-              <div>
-                <p>Name: {pet.name}</p>
-                <p>Birthday: {pet.birthday}</p>
-                <p>Hunger Level: {pet.hungerLevel}</p>
-                <p>Happiness Level: {pet.happinessLevel}</p>
-              </div>
-            </li>
-          )
-        })}
+        {petList
+          .sort((a, b) => (a.birthday < b.birthday ? 1 : 0))
+          .map(function (pet) {
+            return (
+              <li key={pet.id}>
+                <Link to={`./petdetails/${pet.id}`}>
+                  Click for details on {[pet.name]}
+                </Link>
+                <div>
+                  <p>Name: {pet.name}</p>
+                  <p>
+                    Birthday: ({new Date(pet.birthday).toLocaleDateString()})
+                  </p>
+                  <p>Hunger Level: {pet.hungerLevel}</p>
+                  <p>Happiness Level: {pet.happinessLevel}</p>
+                </div>
+              </li>
+            )
+          })}
       </ul>
     </>
   )

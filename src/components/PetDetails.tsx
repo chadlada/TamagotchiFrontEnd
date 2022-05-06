@@ -2,7 +2,9 @@ import axios from 'axios'
 import React, { useEffect, useState } from 'react'
 import { useNavigate, useParams } from 'react-router'
 import { PetType } from '../App'
-// import image from './images/playwithme.png'
+import image from '../images/playwithme.png'
+import image2 from '../images/sadtam.png'
+import image3 from '../images/badtam.png'
 
 export function PetDetails() {
   const history = useNavigate()
@@ -103,7 +105,8 @@ export function PetDetails() {
       history('/')
     }
   }
-
+  console.log({ petPlay })
+  console.log({ petScold })
   return (
     <>
       <p className="detailsp">Interact with your pet!</p>
@@ -122,6 +125,11 @@ export function PetDetails() {
         <p>Birthday: {petDetails.birthday}</p>
         <p>Hunger: {petHunger}</p>
         <p>Happiness: {petDetails.happinessLevel}</p>
+      </div>
+      <div className="interact">
+        <img src={image} />
+        <img src={image2} />
+        <img src={image3} />
       </div>
     </>
   )
