@@ -122,7 +122,7 @@ export function PetDetails() {
       <div className="pet-details">
         <p>Name: {petDetails.name}</p>
         <p>Pet ID: {params.id}</p>
-        <p>Birthday: {petDetails.birthday}</p>
+        <p>Birthday: ({new Date(petDetails.birthday).toLocaleDateString()})</p>
         <p>Hunger: {petHunger}</p>
         <p>Happiness: {petDetails.happinessLevel}</p>
       </div>
