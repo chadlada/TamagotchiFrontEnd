@@ -22,7 +22,8 @@ export function App() {
           <h1>Tamagotchi Rises Again!</h1>
         </Link>
         <div className="tam-image">
-          <img src={image}></img>
+          <img src={image}
+          alt="a tamagotchi"></img>
         </div>
       </header>
 

@@ -34,6 +34,7 @@ export function Homepage() {
     )
     if (response.status === 201) {
       loadPets()
+      // Clears input ('') field after submit
       setNewPetName('')
     }
   }
@@ -61,8 +62,8 @@ export function Homepage() {
       <ul>
         {petList
           .sort((a, b) => (a.birthday < b.birthday ? 1 : 0))
-          .map(function (pet) {
-            return (
+          .map((pet) =>
+             (
               <li key={pet.id}>
                 <Link to={`./petdetails/${pet.id}`}>
                   Click for details on {[pet.name]}
@@ -77,7 +78,7 @@ export function Homepage() {
                 </div>
               </li>
             )
-          })}
+          )}
       </ul>
     </>
   )

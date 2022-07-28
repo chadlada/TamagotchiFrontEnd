@@ -127,9 +127,9 @@ export function PetDetails() {
         <p>Happiness: {petDetails.happinessLevel}</p>
       </div>
       <div className="interact">
-        <img src={image} />
-        <img src={image2} />
-        <img src={image3} />
+        <img src={image} alt="tamagotchi1" />
+        <img src={image2} alt="tamagotchi2" />
+        <img src={image3} alt="tamagotchi3"/>
       </div>
     </>
   )
