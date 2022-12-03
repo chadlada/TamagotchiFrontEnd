@@ -73,7 +73,7 @@ export function Homepage() {
                   <p>
                     Birthday: ({new Date(pet.birthday).toLocaleDateString()})
                   </p>
-                  <p>Hunger Level: {pet.hungerLevel}</p>
+                  <p>Hunger Levels: {pet.hungerLevel}</p>
                   <p>Happiness Level: {pet.happinessLevel}</p>
                 </div>
               </li>
